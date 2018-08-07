@@ -2,17 +2,42 @@
 // returns the sum of those numbers.
 
 function sum (numbers) {
-  console.log('numbers', numbers)
-  return 0
+  var totalSum = 0;
+
+  for ( var idx = 0; idx < numbers.length; idx++) {
+    totalSum += numbers[idx]
+  }
+  return totalSum
 }
 
 // 2. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
 
+ function average (numbers) {
+
+  if (numbers.length === 0) {
+    return 
+  }
+     return sum (numbers) / numbers.length 
+ }
+
 // 3. Create a function called "intersection" that takes two arrays and
 // returns a new array that contains the elements found in both arrays.
 // The order they are in does not matter, but no duplicates should be
 // in the returned array, even if they were in the input.
+
+  function intersection (array1, array2) {
+    var newArray = [];
+
+    for ( var idx = 0; idx < array1.length; idx++) {
+      for (var idx2 = 0; idx2 < array2.length; idx++) {
+        if (array1[idx] === array2[idx2]) {
+          newArray.push(array1[idx])
+        }
+        return newArray
+      }
+    }     
+  }  
 
 // 4. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
